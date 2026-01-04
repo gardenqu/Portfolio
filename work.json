@@ -1,0 +1,33 @@
+{
+  "timelineData": [
+    {
+      "company": "Wiley Edge (onsite at Centene), Remote",
+      "role": "Application Development Engineer I",
+      "duration": "June 2022 – March 2024",
+      "description": "Designed, developed, tested, and maintained enterprise-level Java applications and Python scripts. Resolved application defects, mentored incoming developers, and improved data processing by streamlining AWS Cloud Storage integration.",
+      "skills": [
+        "Java",
+        "Python",
+        "AWS Cloud Storage",
+        "Application Development",
+        "Debugging & Optimization",
+        "Mentorship",
+        "System Integration",
+        "Enterprise Software"
+      ]
+    },
+    {
+      "company": "Labcorp, RTP, NC",
+      "role": "Cytogenetic Technologist",
+      "duration": "September 2020 – November 2021",
+      "description": "Performed laboratory tasks supporting diagnosis of chromosomal abnormalities. Communicated analytical results clearly and learned cytogenetics technologies and software rapidly to analyze patient samples.",
+      "skills": [
+        "Laboratory Analysis",
+        "Cytogenetics",
+        "Scientific Communication",
+        "Diagnostic Testing",
+        "Rapid Technology Learning"
+      ]
+    }
+  ]
+}

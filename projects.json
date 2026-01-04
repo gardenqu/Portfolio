@@ -1,0 +1,41 @@
+{
+  "projects": [
+    {
+      "name": "Crossword Generator",
+      "description": "A dynamic crossword puzzle generator that places words on a grid, assigns clue numbers, and supports saving/loading puzzle state.",
+       "technologies": ["JavaScript", "React"],
+      "images": "./imgs/crossword.gif",
+      "gitHub_link": "",
+      "link": "",
+      "live": 0
+    },
+    {
+      "name": "BeatScouter",
+      "description": "An AI-powered music discovery app that helps users find trending beats and tracks tailored to their style. It features personalized recommendations, smooth navigation, and an intuitive interface, making music exploration fast, engaging, and enjoyable.",
+      "technologies": ["Python","Google Colab","Kotlin", "Android Studio"],
+      "images": "./imgs/beat.gif",
+      "gitHub_link": "https://github.com/gardenqu/BeatScouter",
+      "link": "",
+      "live": 0
+    },
+    {
+      "name": "Calculator",
+      "description": "A sleek and intuitive Android calculator app built with Kotlin, supporting basic arithmetic operations and handling decimals and negative numbers. It features a clean interface, continuous calculations, and easy clear/reset functionality, offering fast and accurate results for everyday use.",
+      "technologies": ["Kotlin", "Android Studio"],
+      "images": "./imgs/calc.gif",
+      "gitHub_link": "https://github.com/gardenqu/Calculator",
+      "link": "",
+      "live": 0
+    },
+    {
+      "name": "Easy-Split",
+      "description": "Take a picture of the receipt and have the app tell you how much each person owes, then connects you with mobile banking so you can split evenly. Keeps track of spending for others.",
+       "technologies": ["Flask", "Python", "Machine Learning"],
+      "images": "./imgs/EasySplit.gif",
+      "gitHub_link": "https://github.com/gardenqu/Easy-Split-Gdi-Hackathon-2025",
+      "link": "",
+      "live": 0
+    }
+  ]
+}
+
