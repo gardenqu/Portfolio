@@ -1,29 +1,24 @@
 let data = [];
+let timelineData = [];
 
 fetch('./projects.json')
   .then(res => res.json())
   .then(json => {
-    data = json.projects; 
+    data = json.projects;
     createCards(data);
   });
-
-
-
-  let timelineData = []
 
 fetch('./work.json')
   .then(res => res.json())
   .then(json => {
-    timelineData = json.timelineData;  
+    timelineData = json.timelineData;
   });
 
-
-
+// REMOVED window.onload — it was calling createCards(data) before the fetch
 
 function createCards(data) {
   const projectsSection = document.getElementById('projects');
   projectsSection.innerHTML = "<h2>Projects</h2><div class='card-container'></div>";
-
   const container = projectsSection.querySelector('.card-container');
 
   data.forEach(item => {
@@ -31,7 +26,7 @@ function createCards(data) {
     card.className = 'card';
 
     // ---------------------------
-    // Side 2
+    // Side 1 (content/back face)
     // ---------------------------
     const face1 = document.createElement('div');
     face1.className = 'face face1';
@@ -45,45 +40,41 @@ function createCards(data) {
     const p = document.createElement('p');
     p.textContent = item.description;
 
-    const gitLink = document.createElement('a');
-    gitLink.href = item.gitHub_link;
-    gitLink.target = "_blank";
-    gitLink.textContent = "GitHub Repository";
-
-
-    
-
-
     content.appendChild(h2);
     content.appendChild(p);
-    content.appendChild(gitLink);
 
-    if(item.live){
-    const link = document.createElement('a');
-    link.href = item.link;
-    link.target = "_blank";
-    link.textContent = "View Project";
-    content.appendChild(link);
+ 
+    if (item.gitHub_link) {
+      const gitLink = document.createElement('a');
+      gitLink.href = item.gitHub_link;
+      gitLink.target = "_blank";
+      gitLink.textContent = "GitHub Repository";
+      content.appendChild(gitLink);
     }
-    
+
+    if (item.live) {
+      const link = document.createElement('a');
+      link.href = item.link;
+      link.target = "_blank";
+      link.textContent = "View Project";
+      content.appendChild(link);
+    }
+
     face1.appendChild(content);
 
     // ---------------------------
-    // Front Image
+    // Side 2 (front/image face)
     // ---------------------------
     const face2 = document.createElement('div');
     face2.className = 'face face2';
 
     const img = document.createElement('img');
     img.src = item.images || "https://placehold.co/600x800";
-    img.alt = item.title;
-
+    img.alt = item.name;  
     face2.appendChild(img);
 
-    // Add faces to card
     card.appendChild(face1);
     card.appendChild(face2);
-
     container.appendChild(card);
   });
 }
@@ -91,13 +82,11 @@ function createCards(data) {
 function renderCareerSection(data) {
   const projectsSection = document.getElementById('projects');
   projectsSection.innerHTML = "<h2>Career</h2><div class='career-container'></div>";
-
   const container = projectsSection.querySelector('.career-container');
 
   data.forEach(item => {
     const timelineItem = document.createElement('div');
     timelineItem.className = 'timeline-item';
-
     timelineItem.innerHTML = `
       <div class="timeline-content">
         <h3>${item.role}</h3>
@@ -107,14 +96,13 @@ function renderCareerSection(data) {
         <p><strong>Skills:</strong> ${item.skills.join(", ")}</p>
       </div>
     `;
-
     container.appendChild(timelineItem);
   });
 }
 
 document.getElementById('career-link').addEventListener('click', e => {
   e.preventDefault();
-  renderCareerSection(timelineData);  
+  renderCareerSection(timelineData);
   document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
 });
 
