@@ -19,14 +19,6 @@ fetch('./work.json')
 
 
 
-window.onload = function() {
-  createCards(data);
- 
-};
-
-
-
-
 
 function createCards(data) {
   const projectsSection = document.getElementById('projects');
