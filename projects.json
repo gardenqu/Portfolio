@@ -29,7 +29,7 @@
     },
     {
       "name": "Easy-Split",
-      "description": "Take a picture of the receipt and have the app tell you how much each person owes, then connects you with mobile banking so you can split evenly. Keeps track of spending for others.",
+      "description": " (Still in Progress) Take a picture of the receipt and have the app tell you how much each person owes, then connects you with mobile banking so you can split evenly. Keeps track of spending for others.",
        "technologies": ["Flask", "Python", "Machine Learning"],
       "images": "./imgs/EasySplit.gif",
       "gitHub_link": "https://github.com/gardenqu/Easy-Split-Gdi-Hackathon-2025",
